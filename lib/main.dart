@@ -7,10 +7,14 @@ import 'dart:convert';
 
 import 'package:currency_converter/pages/home.dart';
 
-final _apiKey = dotenv.env['HGBRASIL_API_KEY']!;
-final _uri = "https://api.hgbrasil.com/finance?format=json&key=$_apiKey";
+final _apiKey = dotenv.get('HGBRASIL_API_KEY', fallback: null);
+final _uri = 'https://api.hgbrasil.com/finance?format=json&key=$_apiKey';
 
-void main() async {
+Future main() async {
+  await dotenv.load(fileName: ".env");
+
+  debugPrint(_apiKey);
+
   runApp(const MaterialApp(
     home: Home(),
   ));
