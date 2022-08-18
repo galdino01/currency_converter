@@ -18,6 +18,12 @@ class _HomeState extends State<Home> {
   double dollar = 0.0;
   double euro = 0.0;
 
+  void _realChanged(String text) {}
+
+  void _dollarChanged(String text) {}
+
+  void _euroChanged(String text) {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,18 +79,21 @@ class _HomeState extends State<Home> {
                         label: 'Reais',
                         prefix: 'R\$ ',
                         controller: _realController,
+                        onChanged: _realChanged,
                       ),
                       const Divider(color: Colors.white),
                       CustomTextField(
                         label: 'Dolares',
                         prefix: 'US\$ ',
                         controller: _dollarController,
+                        onChanged: _dollarChanged,
                       ),
                       const Divider(color: Colors.white),
                       CustomTextField(
                         label: 'Euros',
                         prefix: '€ ',
                         controller: _euroController,
+                        onChanged: _euroChanged,
                       ),
                     ],
                   ),
