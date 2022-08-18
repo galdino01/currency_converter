@@ -35,7 +35,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
         border: const OutlineInputBorder(),
         prefixText: widget.prefix,
       ),
-      onChanged: (context) => widget.onChanged,
+      onChanged: (value) => widget.onChanged(value),
     );
   }
 }

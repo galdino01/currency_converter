@@ -13,8 +13,6 @@ final _uri = 'https://api.hgbrasil.com/finance?format=json&key=$_apiKey';
 Future main() async {
   await dotenv.load(fileName: ".env");
 
-  debugPrint(_apiKey);
-
   runApp(const MaterialApp(
     home: Home(),
   ));
