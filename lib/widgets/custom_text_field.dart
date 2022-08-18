@@ -5,10 +5,12 @@ class CustomTextField extends StatefulWidget {
     Key? key,
     required this.label,
     required this.prefix,
+    required this.controller,
   }) : super(key: key);
 
   final String label;
   final String prefix;
+  final TextEditingController controller;
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();

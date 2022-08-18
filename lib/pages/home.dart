@@ -11,6 +11,10 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  final _realController = TextEditingController();
+  final _dollarController = TextEditingController();
+  final _euroController = TextEditingController();
+
   double dollar = 0.0;
   double euro = 0.0;
 
@@ -59,8 +63,8 @@ class _HomeState extends State<Home> {
                   padding: const EdgeInsets.all(10),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: const [
-                      Icon(
+                    children: [
+                      const Icon(
                         Icons.monetization_on,
                         size: 150,
                         color: Colors.amber,
@@ -68,16 +72,19 @@ class _HomeState extends State<Home> {
                       CustomTextField(
                         label: 'Reais',
                         prefix: 'R\$ ',
+                        controller: _realController,
                       ),
-                      Divider(color: Colors.white),
+                      const Divider(color: Colors.white),
                       CustomTextField(
                         label: 'Dolares',
                         prefix: 'US\$ ',
+                        controller: _dollarController,
                       ),
-                      Divider(color: Colors.white),
+                      const Divider(color: Colors.white),
                       CustomTextField(
                         label: 'Euros',
                         prefix: '€ ',
+                        controller: _euroController,
                       ),
                     ],
                   ),
