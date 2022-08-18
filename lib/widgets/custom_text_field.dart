@@ -3,15 +3,17 @@ import 'package:flutter/material.dart';
 class CustomTextField extends StatefulWidget {
   const CustomTextField({
     Key? key,
+    required this.type,
+    required this.controller,
     required this.label,
     required this.prefix,
-    required this.controller,
     required this.onChanged,
   }) : super(key: key);
 
+  final TextInputType type;
+  final TextEditingController controller;
   final String label;
   final String prefix;
-  final TextEditingController controller;
   final Function onChanged;
 
   @override
@@ -22,6 +24,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      keyboardType: widget.type,
+      controller: widget.controller,
       decoration: InputDecoration(
         labelText: widget.label,
         labelStyle: const TextStyle(
@@ -31,6 +35,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
         border: const OutlineInputBorder(),
         prefixText: widget.prefix,
       ),
+      onChanged: (context) => widget.onChanged,
     );
   }
 }
