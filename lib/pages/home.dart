@@ -112,7 +112,8 @@ class _HomeState extends State<Home> {
                         color: Colors.amber,
                       ),
                       CustomTextField(
-                        type: TextInputType.number,
+                        type: const TextInputType.numberWithOptions(
+                            decimal: true),
                         controller: _realController,
                         label: 'Reais',
                         prefix: 'R\$ ',
@@ -120,7 +121,8 @@ class _HomeState extends State<Home> {
                       ),
                       const Divider(color: Colors.white),
                       CustomTextField(
-                        type: TextInputType.number,
+                        type: const TextInputType.numberWithOptions(
+                            decimal: true),
                         controller: _dollarController,
                         label: 'Dolares',
                         prefix: 'US\$ ',
@@ -128,7 +130,8 @@ class _HomeState extends State<Home> {
                       ),
                       const Divider(color: Colors.white),
                       CustomTextField(
-                        type: TextInputType.number,
+                        type: const TextInputType.numberWithOptions(
+                            decimal: true),
                         controller: _euroController,
                         label: 'Euros',
                         prefix: '€ ',
