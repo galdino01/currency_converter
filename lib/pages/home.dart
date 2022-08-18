@@ -178,11 +178,11 @@ class _HomeState extends State<Home> {
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
                                           Text(
-                                            key,
+                                            carouselItems[key]['name'],
                                             style: const TextStyle(
                                               color: Colors.white,
                                               fontWeight: FontWeight.bold,
-                                              fontSize: 20,
+                                              fontSize: 15,
                                             ),
                                           ),
                                         ],
@@ -252,7 +252,7 @@ class _HomeState extends State<Home> {
                                             MainAxisAlignment.spaceBetween,
                                         children: [
                                           Text(
-                                            carouselItems[key]['name'],
+                                            key,
                                             style: const TextStyle(
                                               color: Colors.white,
                                               fontWeight: FontWeight.bold,
