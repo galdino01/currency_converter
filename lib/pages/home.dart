@@ -1,6 +1,8 @@
 import 'package:currency_converter/main.dart';
 import 'package:flutter/material.dart';
 
+import 'package:currency_converter/widgets/custom_text_field.dart';
+
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -63,40 +65,19 @@ class _HomeState extends State<Home> {
                         size: 150,
                         color: Colors.amber,
                       ),
-                      TextField(
-                        decoration: InputDecoration(
-                          labelText: 'Reais',
-                          labelStyle: TextStyle(
-                            color: Colors.black,
-                            fontSize: 18,
-                          ),
-                          border: OutlineInputBorder(),
-                          prefixText: 'R\$ ',
-                        ),
+                      CustomTextField(
+                        label: 'Reais',
+                        prefix: 'R\$ ',
                       ),
                       Divider(color: Colors.white),
-                      TextField(
-                        decoration: InputDecoration(
-                          labelText: 'Dolares',
-                          labelStyle: TextStyle(
-                            color: Colors.black,
-                            fontSize: 18,
-                          ),
-                          border: OutlineInputBorder(),
-                          prefixText: 'US\$ ',
-                        ),
+                      CustomTextField(
+                        label: 'Dolares',
+                        prefix: 'US\$ ',
                       ),
                       Divider(color: Colors.white),
-                      TextField(
-                        decoration: InputDecoration(
-                          labelText: 'Euros',
-                          labelStyle: TextStyle(
-                            color: Colors.black,
-                            fontSize: 18,
-                          ),
-                          border: OutlineInputBorder(),
-                          prefixText: '€ ',
-                        ),
+                      CustomTextField(
+                        label: 'Euros',
+                        prefix: '€ ',
                       ),
                     ],
                   ),
