@@ -5,8 +5,6 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:currency_converter/main.dart';
 import 'package:currency_converter/widgets/custom_text_field.dart';
 
-import 'dart:convert';
-
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -222,7 +220,11 @@ class _HomeState extends State<Home> {
                                           Container(
                                             padding: const EdgeInsets.all(8),
                                             decoration: BoxDecoration(
-                                              color: Colors.blue,
+                                              color: carouselItems[key]
+                                                          ['variation'] >
+                                                      0
+                                                  ? Colors.green
+                                                  : Colors.red,
                                               borderRadius:
                                                   BorderRadius.circular(5),
                                             ),
